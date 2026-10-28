@@ -1,0 +1,36 @@
+# ==========================================================
+# LiteLLM Configuration for Claude Code -> Google Colab Ollama
+# ==========================================================
+
+model_list:
+  # Map all Anthropic models expected by Claude Code to your Colab Ollama instance
+  - model_name: "claude-3-7-sonnet-20250219"
+    litellm_params:
+      model: "ollama/qwen2.5-coder:7b"
+      api_base: "YOUR_CLOUDFLARE_TUNNEL_URL" # e.g. https://xxxx.trycloudflare.com
+
+  - model_name: "claude-3-5-sonnet-20241022"
+    litellm_params:
+      model: "ollama/qwen2.5-coder:7b"
+      api_base: "YOUR_CLOUDFLARE_TUNNEL_URL"
+
+  - model_name: "claude-3-5-haiku-20241022"
+    litellm_params:
+      model: "ollama/qwen2.5-coder:7b"
+      api_base: "YOUR_CLOUDFLARE_TUNNEL_URL"
+
+  - model_name: "claude-opus-5"
+    litellm_params:
+      model: "ollama/qwen2.5-coder:7b"
+      api_base: "YOUR_CLOUDFLARE_TUNNEL_URL"
+
+  - model_name: "claude-3-haiku-20240307"
+    litellm_params:
+      model: "ollama/qwen2.5-coder:7b"
+      api_base: "YOUR_CLOUDFLARE_TUNNEL_URL"
+
+litellm_settings:
+  callbacks: ["strip_cache.strip_cache_handler"]
+
+general_settings:
+  master_key: "sk-litellm-free"

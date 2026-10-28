@@ -1,0 +1,4 @@
+litellm>=1.100.0
+fastapi>=0.115.0
+uvicorn>=0.32.0
+backoff>=2.2.1
